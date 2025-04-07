@@ -134,6 +134,7 @@ public class Exp4_S4_Wilangely_Diaz {
                 descuento = 0.0;
                      System.out.println("Paga el total del valor");
          }
+       
                        
          double totalPagar= precioBase - (precioBase * descuento);
          System.out.println("Total a pagar; $"+totalPagar);
@@ -147,20 +148,24 @@ public class Exp4_S4_Wilangely_Diaz {
          System.out.println("Descuento aplicado:"+descuento);
          System.out.println("Valor total a pagar: $"+totalPagar);
          
-         System.out.println("¿Deseas realizar otra compra? (s/n)");
-         String respuesta = sc.next().toLowerCase();
          
+        System.out.println("¿Deseas realizar otra compra? (s/n)");
+         String respuesta = sc.next().toLowerCase();            
          if (!respuesta.equals("s")){
              salir= true;
              System.out.println("Gracias por usar el sistema de Boleteria");
              sc.close();
+        if (!respuesta.equals("s") || !respuesta.equals("n")){
+            System.out.println("Opcion invalida intenta de nuevo");
+            continue;
+            
+        }
          }
-         }
-         
-         salir = true;
          break;
+         
+         
 
-           
+           }    
         case 2:
                 System.out.println("Ok, Adios");
                 sc.close();
@@ -171,9 +176,10 @@ public class Exp4_S4_Wilangely_Diaz {
                 break;
               }
 
-            }    
+            } 
     }
-}
+    }
+
 
 
                
